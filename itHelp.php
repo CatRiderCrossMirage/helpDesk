@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <!-- https://icons.getbootstrap.com/ -->
     <link rel = "icon" type = "image/png" size="16x16" href = "pic/html.png">
-    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
     <title>IT Help</title>
 </head>
@@ -188,20 +188,31 @@
     </nav>
     <!-- content -->
     <!-- question NEW! -->
+    <div class="container">
     <div class="row">
+        <div class="col">
+            <!-- <button
+                type="button"
+                <?php 
 
-        <button
-            type="button"
-            class="btn btn-sm btn-outline-warning  m-2"
-            style="width:100%;hight:50px;"
-        >
+                    // if ($row['statusPost'] == 1) {
+                    //     $btnChange='btn-outline-success';
+                    // } else {
+                    //     $btnChange='btn-outline-warning';
+                    // }
+
+                ?>
+                class="btn btn-sm m-2 <?php //$btnChange='btn-outline-warning'; echo $btnChange; ?>"
+                style="width:100%;hight:50px;"
+            >
             <i class="bi bi-question-lg"></i>
                 anything can be content here <br>
                 fdagdfgdfgdfsadsfdsafsdafsdafsdafsafd
-        </button>
-        <!-- <div class="col-11 p-4 my-3 border-bottom">
-                new question here
-        </div> -->
+            </button> -->
+            <!-- <div class="col-11 p-4 my-3 border-bottom">
+                    new question here
+            </div> -->
+        </div>
         
         <button
             type="button"
@@ -237,6 +248,7 @@
                     anything can be content here <br>
                     fdagdfgdfgdfsadsfdsafsdafsdafsdafsafd
             </button>
-    
+    </div>
+    </div>
 </body>
 </html>
