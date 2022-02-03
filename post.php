@@ -32,32 +32,50 @@
     <title>IT Help</title>
 </head>
 <body>
-    <form action="####" class="offset-md-3 col-md-6" method="post">
+    <div class="container">
+
+    <form action="upload.php" class="offset-md-3 col-md-6" method="post" enctype="multipart/form-data">
         <!-- post here -->
         <div class="row m-2">
             <div class="form-outline">
-                <textarea id="form10" name="topic"  
+                <input type="text" id="form1" name="topic" class="form-control"></input>
+                <label for="form1" class="form-label">กรุณากรอกหัวข้อที่ถาม</label>
+            </div>
+        </div>
+        <div class="row m-2">
+            <div class="form-outline">
+                <input type="text" id="form1" name="writher" class="form-control"></input>
+                <label for="form1" class="form-label">กรุณากรอกชื่อ</label>
+            </div>
+        </div>
+        <div class="row m-2">
+            <div class="form-outline ">
+                <textarea id="form10" name="content"  
                         class="md-textarea form-control" rows="5"></textarea>
-                <label for="form-10" class="form-label"><i class="bi bi-pencil"></i>คุณต้องการถามอะไร?</label>
-            </div>  
+                <label for="form10" class="form-label"><i class="bi bi-pencil"></i>คุณต้องการถามอะไร?</label>
+            </div>
         </div>
         <!-- upload here -->
         <div class="row m-2">
-            <div class="btn btn-primary btn-sm">
-                <i class="far fa-image fa-3x"></i>
-                <input type="file" name="file[]" multiple></input>
-            </div>
-            <!-- <input type="file" class="btn btn-primary btn-sm" name="file[]" multiple></i></input> -->
-            <!-- <input type="file" class="form-control" name="file[]" multiple></input> -->
+            <input type="file" id="file-input" name="image[]" 
+                    onchange="preview()" multiple>
+            <label for="file-input" style="background-color: #025bee;">
+                <i class="fas fa-image fa-lg"></i> &nbsp;Choose A Photo
+            </label>
+            <p id="num-of-files">No Files Chosen</p>
+            <div id="images"></div>
+
         </div>
         <!-- button -->
         <div class="row m-2">
-                <button type="submit" name="post" class="btn btn-success btn-lg">Post</button>
+                <button type="submit" name="submit" class="btn btn-success btn-lg">Post</button>
         </div>
 
     </form>
+    
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Custom scripts -->
     <script type="text/javascript"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
